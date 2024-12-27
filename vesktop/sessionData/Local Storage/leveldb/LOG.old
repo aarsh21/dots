@@ -1,0 +1,6 @@
+2024/12/27-16:05:14.782 22da3f Reusing MANIFEST /home/aarsh/.config/vesktop/sessionData/Local Storage/leveldb/MANIFEST-000001
+2024/12/27-16:05:14.785 22da3f Recovering log #31
+2024/12/27-16:05:14.785 22da3f Reusing old log /home/aarsh/.config/vesktop/sessionData/Local Storage/leveldb/000031.log 
+2024/12/27-16:28:15.176 22da40 Level-0 table #35: started
+2024/12/27-16:28:15.179 22da40 Level-0 table #35: 25504 bytes OK
+2024/12/27-16:28:15.181 22da40 Delete type=0 #31

@@ -1,90 +1,35 @@
 return {
-  { "datsfilipe/vesper.nvim" },
-  -- add gruvbox
   {
-    "ellisonleao/gruvbox.nvim",
+    "rose-pine/neovim",
+    name = "rose-pine",
     opts = {
-      transparent_mode = true,
-      terminal_colors = true, -- add
-      undercurl = true,
-      underline = true,
-      bold = true,
-      italic = {
-        strings = true,
-        emphasis = true,
-        comments = true,
-        operators = false,
-        folds = true,
-      },
-      contrast = "hard",
-    },
-  },
-  {
-    "folke/tokyonight.nvim",
-    lazy = false,
-    opts = {
-      style = "night",
-      transparent = true,
-      terminal_colors = true,
       styles = {
-        comments = { italic = true },
-        keywords = { italic = true },
-        functions = { bold = true, italic = true },
-        sidebars = "transparent", -- style for sidebars, see below
-        floats = "transparent", -- style for floating windows
+        bold = true,
+        italic = true,
+        transparency = false,
       },
-      lualine_bold = true,
     },
   },
   {
     "catppuccin/nvim",
+    name = "catppuccin",
     opts = {
-      transparent_background = true,
-      flavour = "mocha",
-      comments = { "italic" }, -- Change the style of comments
-      conditionals = { "italic" },
-      loops = { "italic" },
-      functions = { "bold" },
-      -- keywords = {},
-      -- strings = {},
-      -- variables = {},
-      -- numbers = {},
-      -- booleans = {},
-      -- properties = {},
-      -- types = {},
-      operators = { "bold" },
-      sidebars = "dark",
-      floats = "dark",
-      -- miscs = {}, -- Uncomment to turn off hard-coded styles
+      transparent_background = true, -- disables setting the background color.
+      show_end_of_buffer = false,
+      term_colors = false, -- sets terminal colors (e.g. `g:terminal_color_0`)
+      dim_inactive = {
+        enabled = false, -- dims the background color of inactive window
+        shade = "dark",
+        percentage = 0.15, -- percentage of the shade to apply to the inactive window
+      },
     },
-    default_integrations = true,
-    integrations = {
-      cmp = true,
-      gitsigns = true,
-      nvimtree = true,
-      treesitter = true,
-      notify = true,
-    },
+    priority = 1000,
   },
-  {
-    "rebelot/kanagawa.nvim",
-    opts = {
-      undercurl = true, -- enable undercurls
-      commentStyle = { italic = true },
-      functionStyle = { italic = true },
-      keywordStyle = { italic = true },
-      statementStyle = { bold = true },
-      typeStyle = {},
-      transparent = true, -- do not set background color
-      dimInactive = false, -- dim inactive window `:h hl-NormalNC`
-      terminalColors = true,
-    },
-  },
-  -- Configure LazyVim to load gruvbox
+
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "vesper",
+      colorscheme = "catppuccin-mocha",
     },
   },
 }

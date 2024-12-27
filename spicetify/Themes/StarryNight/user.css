@@ -1,4 +1,4 @@
-.button-module__button___hf2qg_marketplace{ 
+.button-module__button___hf2qg_marketplace {
   color: var(--spice-subtext)
 }
 
@@ -6,32 +6,61 @@
   background-color: #00000000 !important;
 }
 
-.main-actionBarBackground-background {
-  background-color: #00000000 !important;
-}
-
 .main-home-homeHeader {
   background-color: #00000000 !important;
+  background-image: none !important;
 }
 
 .Root__top-container {
   background: linear-gradient(180deg, var(--spice-sidebar-alt) 0%, var(--spice-sidebar) 100%);
   overflow: hidden;
-  grid-template-areas: 
+  grid-template-areas:
     "left-sidebar    main-view         now-playing-bar"
     "left-sidebar    main-view         right-sidebar";
+  grid-template-rows: auto auto 1fr;
 }
 
 .global-nav .Root__top-container {
   grid-template-areas:
     "global-nav global-nav global-nav"
     "left-sidebar main-view now-playing-bar"
-    "left-sidebar main-view right-sidebar";
+    "left-sidebar main-view right-sidebar" !important;
+}
+
+.Root__globalNav {
+  background-color: #00000000 !important;
+}
+
+.ffFwfKcPDbmAPLXzxzKq:before {
+  background-color: #00000000 !important;
+}
+
+.I0bVSxvqA3rm5HvciMap {
+  --bgColor: #00000000 !important;
+}
+
+.I0bVSxvqA3rm5HvciMap::after {
+  --bgColor: #00000000 !important;
+}
+
+.PeLrpasyfBW8ql_bmoAi {
+  background-color: #00000000 !important;
+  background-image: none !important;
+}
+
+.PkOz5g82CaoKk1J3GX0e  {
+  background-color: #00000000 !important;
+  background-image: none !important;
+}
+
+.sv5suqIPUwjgUF_BzM41 {
+  transform: none !important;
 }
 
 .Root__right-sidebar {
-  height: calc(100vh - 450px);
   width: min-content;
+  height: auto !important;
+  min-height: 100% !important;
 }
 
 .Root__now-playing-bar {
@@ -43,7 +72,7 @@
 }
 
 .Root__nav-bar {
-  background-color: var(--spice-main) !important;
+  background-color: #00000000 !important;
 }
 
 .main-trackList-trackListRow:hover {
@@ -55,9 +84,54 @@
 }
 
 .rX_OmqCngvY5ZCoYBZgb {
-  background-color: var(--background-base) !important;
+  background-color: #00000000 !important;
 }
 
+.main-yourLibraryX-entryPoints {
+  background-color: #00000000 !important;
+}
+
+.marketplace-header {
+  background-color: #00000000 !important;
+}
+
+.EmeHQXR87mUskYK6xEde {
+  background-color: #00000000 !important;
+}
+
+.lyrics-lyrics-background {
+  background-color: #00000000 !important;
+}
+
+.main-actionBarBackground-background {
+  background-image: none;
+  background-color: #00000000 !important;
+  animation: none !important;
+  -webkit-animation: none !important;
+}
+
+.main-entityHeader-overlay {
+  background: none !important;
+}
+
+.main-entityHeader-background.main-entityHeader-gradient {
+  opacity: 0.5;
+  animation: none !important;
+}
+
+.main-entityHeader-background.main-entityHeader-overlay:after {
+  background-image: none !important;
+  animation: none !important;
+  -webkit-animation: none !important;
+}
+
+.pUNc2aOeOQANHrhYa1GU .RDZ61ETnag1ilfZTkVxe {
+  color: #00000000 !important;
+}
+
+.playlist-playlist-playlistContent {
+  background: #00000000 !important;
+}
 
 .main-nowPlayingBar-nowPlayingBar {
   min-height: 400px;
@@ -75,6 +149,10 @@
 
 [data-right-sidebar-hidden] .Root__main-view {
   grid-area: main-view/main-view/main-view/span 1;
+}
+
+.Root__main-view {
+  background-color: #00000000 !important;
 }
 
 .main-nowPlayingBar-center {
@@ -96,6 +174,7 @@
   width: 220px !important;
   margin: auto;
   background-color: #00000000;
+  box-shadow: 0 0 0px var(--spice-rgb-shadow);
 }
 
 .main-nowPlayingWidget-coverArt .cover-art img {
@@ -115,12 +194,12 @@
   height: 100%;
 }
 
-.main-coverSlotCollapsed-container > :first-child {
+.main-coverSlotCollapsed-container> :first-child {
   width: 100%;
   height: 100%;
 }
 
-.main-coverSlotCollapsed-container > :first-child > :first-child {
+.main-coverSlotCollapsed-container> :first-child> :first-child {
   width: 100%;
   height: 100%;
   background-color: #00000000;
@@ -165,40 +244,123 @@
   color: var(--spice-sidebar);
 }
 
+.starrynight-bg-container {
+  position: fixed;
+  z-index: 0;
+  pointer-events: none;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+}
+
+.ffFwfKcPDbmAPLXzxzKq {
+  background-color: #00000000 !important;
+}
+
 @keyframes twinkle1 {
-  0% { box-shadow: 0px 0px 8px 2px var(--spice-star-glow); }
-  20% { box-shadow: 0px 0px -8px 2px var(--spice-star-glow); }
-  40% { box-shadow: 0px 0px -8px 2px var(--spice-star-glow); }
-  60% { box-shadow: 0px 0px -8px 2px var(--spice-star-glow); }
-  80% { box-shadow: 0px 0px 8px 2px var(--spice-star-glow); }
-  100% { box-shadow: 0px 0px 8px 2px var(--spice-star-glow); }
+  0% {
+    box-shadow: 0px 0px 8px 2px var(--spice-star-glow);
+  }
+
+  20% {
+    box-shadow: 0px 0px -8px 2px var(--spice-star-glow);
+  }
+
+  40% {
+    box-shadow: 0px 0px -8px 2px var(--spice-star-glow);
+  }
+
+  60% {
+    box-shadow: 0px 0px -8px 2px var(--spice-star-glow);
+  }
+
+  80% {
+    box-shadow: 0px 0px 8px 2px var(--spice-star-glow);
+  }
+
+  100% {
+    box-shadow: 0px 0px 8px 2px var(--spice-star-glow);
+  }
 }
 
 @keyframes twinkle2 {
-  0% { box-shadow: 0px 0px 8px 2px var(--spice-star-glow); }
-  20% { box-shadow: 0px 0px 8px 2px var(--spice-star-glow); }
-  40% { box-shadow: 0px 0px -8px 2px var(--spice-star-glow); }
-  60% { box-shadow: 0px 0px -8px 2px var(--spice-star-glow); }
-  80% { box-shadow: 0px 0px -8px 2px var(--spice-star-glow); }
-  100% { box-shadow: 0px 0px 8px 2px var(--spice-star-glow); }
+  0% {
+    box-shadow: 0px 0px 8px 2px var(--spice-star-glow);
+  }
+
+  20% {
+    box-shadow: 0px 0px 8px 2px var(--spice-star-glow);
+  }
+
+  40% {
+    box-shadow: 0px 0px -8px 2px var(--spice-star-glow);
+  }
+
+  60% {
+    box-shadow: 0px 0px -8px 2px var(--spice-star-glow);
+  }
+
+  80% {
+    box-shadow: 0px 0px -8px 2px var(--spice-star-glow);
+  }
+
+  100% {
+    box-shadow: 0px 0px 8px 2px var(--spice-star-glow);
+  }
 }
 
 @keyframes twinkle3 {
-  0% { box-shadow: 0px 0px -8px 2px var(--spice-star-glow); }
-  20% { box-shadow: 0px 0px 8px 2px var(--spice-star-glow); }
-  40% { box-shadow: 0px 0px 8px 2px var(--spice-star-glow); }
-  60% { box-shadow: 0px 0px 8px 2px var(--spice-star-glow); }
-  80% { box-shadow: 0px 0px -8px 2px var(--spice-star-glow); }
-  100% { box-shadow: 0px 0px -8px 2px var(--spice-star-glow); }
+  0% {
+    box-shadow: 0px 0px -8px 2px var(--spice-star-glow);
+  }
+
+  20% {
+    box-shadow: 0px 0px 8px 2px var(--spice-star-glow);
+  }
+
+  40% {
+    box-shadow: 0px 0px 8px 2px var(--spice-star-glow);
+  }
+
+  60% {
+    box-shadow: 0px 0px 8px 2px var(--spice-star-glow);
+  }
+
+  80% {
+    box-shadow: 0px 0px -8px 2px var(--spice-star-glow);
+  }
+
+  100% {
+    box-shadow: 0px 0px -8px 2px var(--spice-star-glow);
+  }
 }
 
 @keyframes twinkle4 {
-  0% { box-shadow: 0px 0px -8px 2px var(--spice-star-glow); }
-  20% { box-shadow: 0px 0px -8px 2px var(--spice-star-glow); }
-  40% { box-shadow: 0px 0px 8px 2px var(--spice-star-glow); }
-  60% { box-shadow: 0px 0px 8px 2px var(--spice-star-glow); }
-  80% { box-shadow: 0px 0px 8px 2px var(--spice-star-glow); }
-  100% { box-shadow: 0px 0px -8px 2px var(--spice-star-glow); }
+  0% {
+    box-shadow: 0px 0px -8px 2px var(--spice-star-glow);
+  }
+
+  20% {
+    box-shadow: 0px 0px -8px 2px var(--spice-star-glow);
+  }
+
+  40% {
+    box-shadow: 0px 0px 8px 2px var(--spice-star-glow);
+  }
+
+  60% {
+    box-shadow: 0px 0px 8px 2px var(--spice-star-glow);
+  }
+
+  80% {
+    box-shadow: 0px 0px 8px 2px var(--spice-star-glow);
+  }
+
+  100% {
+    box-shadow: 0px 0px -8px 2px var(--spice-star-glow);
+  }
 }
 
 @keyframes spin {
@@ -226,19 +388,19 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   height: 4px;
   background: var(--spice-shooting-star);
   border-radius: 50%;
-  animation: animate 3s linear infinite;
+  animation: animate 3s linear;
   left: initial;
   z-index: -1;
 }
 
 .shootingstar::before {
-  content:'';
+  content: '';
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   width: 300px;
   height: 1px;
-  background: linear-gradient(90deg,var(--spice-shooting-star),transparent);
+  background: linear-gradient(90deg, var(--spice-shooting-star), transparent);
 }
 
 @keyframes animate {
@@ -246,9 +408,11 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     transform: rotate(315deg) translateX(0);
     opacity: 1;
   }
+
   70% {
     opacity: 1;
   }
+
   100% {
     transform: rotate(315deg) translateX(-1500px);
     opacity: 0;

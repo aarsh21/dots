@@ -13,6 +13,7 @@ plugins=( git sudo zsh-256color zsh-autosuggestions zsh-syntax-highlighting )
 source $ZSH/oh-my-zsh.sh
 source ~/.zsh/catppuccin_mocha-zsh-syntax-highlighting.zsh
 
+
 # now load zsh-syntax-highlighting plugin
 alias  c='clear' # clear terminal
 alias  l='eza -lh  --icons=auto' # long list

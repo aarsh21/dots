@@ -1,0 +1,21 @@
+2024/12/27-16:42:34.753 23ca91 Reusing MANIFEST /home/aarsh/.config/vesktop/sessionData/Local Storage/leveldb/MANIFEST-000001
+2024/12/27-16:42:34.756 23ca91 Recovering log #34
+2024/12/27-16:42:34.756 23ca91 Reusing old log /home/aarsh/.config/vesktop/sessionData/Local Storage/leveldb/000034.log 
+2024/12/27-16:43:41.230 23ca92 Level-0 table #38: started
+2024/12/27-16:43:41.232 23ca92 Level-0 table #38: 29227 bytes OK
+2024/12/27-16:43:41.233 23ca92 Delete type=0 #34
+2024/12/27-17:37:34.983 23ca92 Level-0 table #40: started
+2024/12/27-17:37:34.984 23ca92 Level-0 table #40: 10555 bytes OK
+2024/12/27-17:37:34.985 23ca92 Delete type=0 #37
+2024/12/27-17:37:34.985 23ca92 Compacting 4@0 + 1@1 files
+2024/12/27-17:37:34.987 23ca92 Generated table #41@0: 109 keys, 38931 bytes
+2024/12/27-17:37:34.987 23ca92 Compacted 4@0 + 1@1 files => 38931 bytes
+2024/12/27-17:37:34.988 23ca92 compacted to: files[ 0 1 0 0 0 0 0 ]
+2024/12/27-17:37:34.988 23ca92 Delete type=2 #30
+2024/12/27-17:37:34.988 23ca92 Delete type=2 #32
+2024/12/27-17:37:34.988 23ca92 Delete type=2 #35
+2024/12/27-17:37:34.988 23ca92 Delete type=2 #38
+2024/12/27-17:37:34.988 23ca92 Delete type=2 #40
+2024/12/27-18:21:34.982 23ca92 Level-0 table #43: started
+2024/12/27-18:21:34.984 23ca92 Level-0 table #43: 20955 bytes OK
+2024/12/27-18:21:34.985 23ca92 Delete type=0 #39

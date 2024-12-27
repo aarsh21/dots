@@ -1,0 +1,8 @@
+[init]
+	defaultBranch = main
+[user]
+	email = aarshpersonal21@gmail.com
+	name = aarsh21
+	signingkey = /home/aarsh/.ssh/id_ed25519.pub
+[gpg]
+	format = ssh

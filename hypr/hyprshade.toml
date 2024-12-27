@@ -1,0 +1,9 @@
+[[shaders]]
+name = "vibrance"
+default = true
+[shaders.config]
+balance = { red = 1.0, green = 1.0, blue = 1.0 } # 0.0 - 10.0
+strength = 0.3
+
+[[shaders]]
+name = "blue-light-filter"
