@@ -1,0 +1,13 @@
+theme = vesper
+# theme = GruvboxDark
+# font-family = Meslo LGS Nerd Font Mono
+# font-family = CaskaydiaMono Nerd Font
+font-family = JetBrainsMono Nerd Font
+shell-integration=zsh
+confirm-close-surface = false
+
+background-opacity= 0.9
+adjust-cell-height = +2%
+
+font-size = 16
+gtk-titlebar = false
