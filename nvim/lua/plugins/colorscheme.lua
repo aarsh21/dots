@@ -1,28 +1,8 @@
 return {
+  { "sainnhe/gruvbox-material" },
   {
-    "rose-pine/neovim",
-    name = "rose-pine",
-    opts = {
-      styles = {
-        bold = true,
-        italic = true,
-        transparency = false,
-      },
-    },
-  },
-  {
-    "catppuccin/nvim",
-    name = "catppuccin",
-    opts = {
-      transparent_background = true, -- disables setting the background color.
-      show_end_of_buffer = false,
-      term_colors = false, -- sets terminal colors (e.g. `g:terminal_color_0`)
-      dim_inactive = {
-        enabled = false, -- dims the background color of inactive window
-        shade = "dark",
-        percentage = 0.15, -- percentage of the shade to apply to the inactive window
-      },
-    },
+    "metalelf0/black-metal-theme-neovim",
+    lazy = false,
     priority = 1000,
   },
   {
@@ -38,6 +18,24 @@ return {
       },
     },
   },
+  {
+    "folke/tokyonight.nvim",
+    lazy = false,
+    priority = 1000,
+    config = function()
+      require("tokyonight").setup({
+        style = "night",
+        transparent = true,
+        dim_inactive = false,
+        lualine_bold = false,
+        styles = {
+          sidebars = "transparent",
+          floats = "transparent",
+        },
+      })
+    end,
+  },
+
   {
     "LazyVim/LazyVim",
     opts = {

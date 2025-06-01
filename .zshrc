@@ -1,41 +1,66 @@
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
+
+# Terminal Art
+
+
+# Load Completions
+
+
+
+# Completions Styling
+
+
+
+# Keybindings
+bindkey -e 
+bindkey '^[[A' history-substring-search-up
+bindkey '^[[B' history-substring-search-down
+
+# History
+HISTSIZE=10000
+SAVEHIST=10000
+HISTFILE=~/.zsh_history
+HISTDUPE=erase
+
+# zsh Options
+
+
+
+# Envs
+export EDITOR=nvim
+export DEFAULT_PLAYER=mpv
+export XDG_CURRENT_DESKTOP=Hyprland
+export XDG_SESSION_DESKTOP=Hyprland
+
+
+
+# Aliases
+alias f="yazi"
+alias gc="git clone"
+alias ls="lsd"
+alias lsa="lsd -A"
+alias v="nvim"
+alias lg="lazygit"
+alias ta="tmux attach"
+alias zshconf="$EDITOR ~/.zshrc && source ~/.zshrc"
+
+
+# Script
+
+
+# Colorscheme -- Pywal16 --
+(cat ~/.cache/wal/sequences &)
+cat ~/.cache/wal/sequences
+source ~/.cache/wal/colors-tty.sh 
+
+# Shell Integrations
 eval "$(starship init zsh)"
-
-
-# Path to your oh-my-zsh installation.
-ZSH=/usr/share/oh-my-zsh/
-
-
-# List of plugins used
-plugins=( git sudo zsh-256color zsh-autosuggestions zsh-syntax-highlighting )
-source $ZSH/oh-my-zsh.sh
-source ~/.zsh/catppuccin_mocha-zsh-syntax-highlighting.zsh
-
-
-# now load zsh-syntax-highlighting plugin
-alias  c='clear' # clear terminal
-alias  l='eza -lh  --icons=auto' # long list
-alias ls='eza -1   --icons=auto' # short list
-alias ll='eza -lha --icons=auto --sort=name --group-directories-first' # long list all
-alias ld='eza -lhD --icons=auto' # long list dirs
-alias lt='eza --icons=auto --tree' # list folder as tree
-alias cd="z"
-alias mkdir='mkdir -p'
-alias inv='nvim $(fzf -m --preview="bat --color=always {}")'
-alias ta='tmux attach'
-
-
 eval "$(zoxide init zsh)"
-export BAT_THEME="Catppuccin Mocha"
+eval "$(fzf --zsh)"
 
-# bun completions
-[ -s "/home/aaisu/.bun/_bun" ] && source "/home/aaisu/.bun/_bun"
 
-# bun
-export BUN_INSTALL="$HOME/.bun"
-export PATH="$BUN_INSTALL/bin:$PATH"
+# Plugins
+source ~/.config/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 
+source ~/.config/zsh/zsh-history-substring-search/zsh-history-substring-search.zsh
+source ~/.config/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 
-# Created by `pipx` on 2024-08-25 15:41:31
-export PATH="$PATH:/home/aaisu/.local/bin"
+
