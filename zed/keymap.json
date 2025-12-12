@@ -1,8 +1,17 @@
 [
   {
-    "context": "Dock || Terminal || Editor",
+    "context": "Terminal",
     "bindings": {
-      // Window's motions
+      "ctrl-s": ["terminal::SendKeystroke", "ctrl-s"],
+      "ctrl-j": ["terminal::SendKeystroke", "ctrl-j"],
+      "ctrl-l": ["terminal::SendKeystroke", "ctrl-l"],
+      "ctrl-k": ["terminal::SendKeystroke", "ctrl-k"],
+      "ctrl-h": ["terminal::SendKeystroke", "ctrl-h"]
+    }
+  },
+  {
+    "context": "Dock || Editor",
+    "bindings": {
       "ctrl-h": "workspace::ActivatePaneLeft",
       "ctrl-l": "workspace::ActivatePaneRight",
       "ctrl-k": "workspace::ActivatePaneUp",
@@ -13,35 +22,106 @@
     "context": "Editor && VimControl && !VimWaiting && !menu",
     "bindings": {
       "space g b": "git::Blame",
+      "space g g": [
+        "task::Spawn",
+        { "task_name": "Lazygit", "reveal_target": "center" }
+      ],
+      "space g s": [
+        "task::Spawn",
+        { "task_name": "Television Git Repos", "reveal_target": "center" }
+      ],
+      "space /": [
+        "task::Spawn",
+        { "task_name": "Television Text Search", "reveal_target": "center" }
+      ],
+      "space p": [
+        "task::Spawn",
+        { "task_name": "Television Kill Process", "reveal_target": "center" }
+      ],
       "space -": "pane::SplitRight",
       "space s s": "outline::Toggle",
-      "cmd-k": "assistant::InlineAssist",
-      "space space": "file_finder::Toggle",
+      "space k": "assistant::InlineAssist",
+      "space space": [
+        "task::Spawn",
+        { "task_name": "Television File Finder", "reveal_target": "center" }
+      ],
       "space s g": "workspace::NewSearch",
-      "cmd-l": "workspace::ToggleLeftDock",
-      "cmd-e": "workspace::ToggleRightDock",
+      "space e": "workspace::ToggleLeftDock",
+      "space a": "workspace::ToggleRightDock",
       "space s d": "diagnostics::Deploy",
-      "cmd-1": ["pane::ActivateItem", 0],
-      "cmd-2": ["pane::ActivateItem", 1],
-      "cmd-3": ["pane::ActivateItem", 2],
-      "cmd-4": ["pane::ActivateItem", 3],
-      "cmd-5": ["pane::ActivateItem", 4],
-      "cmd-6": ["pane::ActivateItem", 5],
-      "cmd-7": ["pane::ActivateItem", 6],
-      "cmd-8": ["pane::ActivateItem", 7],
-      "cmd-9": ["pane::ActivateItem", 8],
-      "cmd-0": "pane::ActivateLastItem"
+      "ctrl-1": ["pane::ActivateItem", 0],
+      "ctrl-2": ["pane::ActivateItem", 1],
+      "ctrl-3": ["pane::ActivateItem", 2],
+      "ctrl-4": ["pane::ActivateItem", 3],
+      "ctrl-5": ["pane::ActivateItem", 4],
+      "ctrl-6": ["pane::ActivateItem", 5],
+      "ctrl-7": ["pane::ActivateItem", 6],
+      "ctrl-8": ["pane::ActivateItem", 7],
+      "ctrl-9": ["pane::ActivateItem", 8],
+      "ctrl-0": "pane::ActivateLastItem",
+      "alt-1": ["pane::ActivateItem", 0],
+      "alt-2": ["pane::ActivateItem", 1],
+      "alt-3": ["pane::ActivateItem", 2],
+      "alt-4": ["pane::ActivateItem", 3],
+      "alt-5": ["pane::ActivateItem", 4],
+      "alt-6": ["pane::ActivateItem", 5],
+      "alt-7": ["pane::ActivateItem", 6],
+      "alt-8": ["pane::ActivateItem", 7],
+      "alt-9": ["pane::ActivateItem", 8],
+      "alt-0": "pane::ActivateLastItem",
+      "ctrl-w": "pane::CloseActiveItem"
     }
   },
   {
     "context": "AgentPanel && not_editing",
     "bindings": {
-      "cmd-l": "workspace::ToggleLeftDock"
+      "space a": "workspace::ToggleRightDock",
+      "space e": "workspace::ToggleLeftDock",
+      "space space": [
+        "task::Spawn",
+        { "task_name": "Television File Finder", "reveal_target": "center" }
+      ],
+      "space g g": [
+        "task::Spawn",
+        { "task_name": "Lazygit", "reveal_target": "center" }
+      ],
+      "space g s": [
+        "task::Spawn",
+        { "task_name": "Television Git Repos", "reveal_target": "center" }
+      ],
+      "space /": [
+        "task::Spawn",
+        { "task_name": "Television Text Search", "reveal_target": "center" }
+      ],
+      "space p": [
+        "task::Spawn",
+        { "task_name": "Television Kill Process", "reveal_target": "center" }
+      ]
     }
   },
   {
     "context": "ProjectPanel && not_editing",
     "bindings": {
+      "space g g": [
+        "task::Spawn",
+        { "task_name": "Lazygit", "reveal_target": "center" }
+      ],
+      "space g s": [
+        "task::Spawn",
+        { "task_name": "Television Git Repos", "reveal_target": "center" }
+      ],
+      "space /": [
+        "task::Spawn",
+        { "task_name": "Television Text Search", "reveal_target": "center" }
+      ],
+      "space p": [
+        "task::Spawn",
+        { "task_name": "Television Kill Process", "reveal_target": "center" }
+      ],
+      "space space": [
+        "task::Spawn",
+        { "task_name": "Television File Finder", "reveal_target": "center" }
+      ],
       "a": "project_panel::NewFile",
       "A": "project_panel::NewDirectory",
       "r": "project_panel::Rename",
@@ -49,8 +129,9 @@
       "x": "project_panel::Cut",
       "c": "project_panel::Copy",
       "p": "project_panel::Paste",
-      "q": "workspace::ToggleRightDock",
-      "cmd-e": "workspace::ToggleRightDock",
+      "q": "workspace::ToggleLeftDock",
+      "space e": "workspace::ToggleLeftDock",
+      "space a": "workspace::ToggleRightDock",
       ":": "command_palette::Toggle",
       "%": "project_panel::NewFile",
       "/": "project_panel::NewSearchInDirectory",
@@ -74,8 +155,26 @@
   {
     "context": "EmptyPane || SharedScreen",
     "bindings": {
-      "space space": "file_finder::Toggle",
-      "space s g": "workspace::NewSearch"
+      "space g g": [
+        "task::Spawn",
+        { "task_name": "Lazygit", "reveal_target": "center" }
+      ],
+      "space g s": [
+        "task::Spawn",
+        { "task_name": "Television Git Repos", "reveal_target": "center" }
+      ],
+      "space /": [
+        "task::Spawn",
+        { "task_name": "Television Text Search", "reveal_target": "center" }
+      ],
+      "space p": [
+        "task::Spawn",
+        { "task_name": "Television Kill Process", "reveal_target": "center" }
+      ],
+      "space space": [
+        "task::Spawn",
+        { "task_name": "Television File Finder", "reveal_target": "center" }
+      ]
     }
   }
 ]

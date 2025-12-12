@@ -1,0 +1,71 @@
+
+# Application bindings
+$terminal = uwsm app -- $TERMINAL
+$browser = omarchy-launch-browser
+
+
+bindd = SUPER, N, Terminal, exec, $terminal --working-directory="$(omarchy-cmd-terminal-cwd)"
+bindd = SUPER, B, Browser, exec, helium-browser
+bindd = SUPER SHIFT, B, Browser (private), exec, $browser --private
+bindd = SUPER, M, Music, exec, omarchy-launch-or-focus spotify
+bindd = SUPER, T, Activity, exec, $terminal -e btop
+bindd = SUPER, D, Docker, exec, $terminal -e lazydocker
+bindd = SUPER, G, Telegram-Desktop, exec,telegram-desktop
+bind = SUPER, Q, killactive
+
+# If your web app url contains #, type it as ## to prevent hyperland treat it as comments
+bindd = SUPER SHIFT, A, Perplexity, exec, omarchy-launch-webapp "https://www.perplexity.ai/"
+bindd = SUPER SHIFT, Y, YouTube, exec, omarchy-launch-webapp "https://youtube.com/"
+
+unbind = SUPER, K
+unbind = SUPER, W
+unbind = SUPER, V
+unbind = SUPER, J
+
+bind = SUPER, RETURN, fullscreen, 0
+
+# Focus movement with HJKL
+bind = SUPER, H, movefocus, l
+bind = SUPER, L, movefocus, r
+bind = SUPER, K, movefocus, u
+bind = SUPER, J, movefocus, d
+
+# Move window with SUPER + Shift + arrow keys
+bind = SUPER SHIFT, H, movewindow, l
+bind = SUPER SHIFT, L, movewindow, r
+bind = SUPER SHIFT, K , movewindow, u
+bind = SUPER SHIFT, J, movewindow, d
+
+bind = CTRL SUPER, L, resizeactive, 50 0
+bind = CTRL SUPER, H, resizeactive, -50 0
+bind = CTRL SUPER, J, resizeactive, 0 50
+bind = CTRL SUPER, K, resizeactive, 0 -50
+
+bind = SUPER, S, togglespecialworkspace,
+bind = SUPER SHIFT, S, movetoworkspace, special
+
+
+# Alternative suggestions
+bindd = SUPER, I, Toggle split, layoutmsg, togglesplit # I for "interchange"
+bindd = SUPER, F, Toggle floating, togglefloating, # R for "release" from tiling
+# Overwrite existing bindings, like putting Omarchy Menu on Super + Space
+# unbind = SUPER, SPACE
+# bindd = SUPER, SPACE, Omarchy menu, exec, omarchy-menu
+bind = SUPER, V, exec,  kitty --class clipse -e 'clipse' 
+
+
+# Screenshots
+bindd = , F9, Screenshot of region, exec, omarchy-cmd-screenshot
+bindd = SHIFT, F9, Screenshot of window, exec, omarchy-cmd-screenshot window
+bindd = CTRL, F9, Screenshot of display, exec, omarchy-cmd-screenshot output
+
+# Screen recordings  
+bindd = ALT, F9, Screen record a region, exec, omarchy-cmd-screenrecord region
+bindd = ALT SHIFT, F9, Screen record a region with audio, exec, omarchy-cmd-screenrecord region audio
+bindd = CTRL ALT, F9, Screen record display, exec, omarchy-cmd-screenrecord output
+bindd = CTRL ALT SHIFT, F9, Screen record display with audio, exec, omarchy-cmd-screenrecord output audio
+
+# Color picker
+bindd = SUPER, F9, Color picker, exec, pkill hyprpicker || hyprpicker -a
+bindd = SUPER SHIFT, T, Tema, exec, uwsm app -- tema
+

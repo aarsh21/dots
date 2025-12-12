@@ -1,0 +1,69 @@
+{
+  "promptsDirectory": "~/.config/btca/prompts",
+  "reposDirectory": "~/.config/btca/repos",
+  "port": 3420,
+  "maxInstances": 5,
+  "repos": [
+    {
+      "name": "svelte",
+      "url": "https://github.com/sveltejs/svelte.dev",
+      "branch": "main",
+      "specialNotes": "This is the svelte docs website repo, not the actual svelte repo. Use the docs to answer questions about svelte."
+    },
+    {
+      "name": "tailwindcss",
+      "url": "https://github.com/tailwindlabs/tailwindcss.com",
+      "branch": "main",
+      "specialNotes": "This is the tailwindcss docs website repo, not the actual tailwindcss repo. Use the docs to answer questions about tailwindcss."
+    },
+    {
+      "name": "nextjs",
+      "url": "https://github.com/vercel/next.js",
+      "branch": "canary"
+    },
+    {
+      "name": "tauri",
+      "url": "https://github.com/tauri-apps/tauri-docs",
+      "branch": "main",
+      "specialNotes": "This is the Tauri documentation repo. Use the docs to answer questions about building desktop and mobile apps with Tauri."
+    },
+    {
+      "name": "tanstack-router",
+      "url": "https://github.com/TanStack/router",
+      "branch": "main",
+      "specialNotes": "This repo contains both the TanStack Router library and its documentation in the /docs folder. Use it to answer questions about type-safe routing in React."
+    },
+    {
+      "name": "shadcn",
+      "url": "https://github.com/shadcn-ui/ui",
+      "branch": "main",
+      "specialNotes": "This is the shadcn/ui repo containing beautifully-designed, accessible components. Use the docs to answer questions about shadcn components and usage."
+    },
+    {
+      "name": "react",
+      "url": "https://github.com/reactjs/react.dev",
+      "branch": "main",
+      "specialNotes": "This is the React documentation website repo. Use the docs to answer questions about React."
+    },
+    {
+      "name": "convex",
+      "url": "https://github.com/get-convex/convex-backend",
+      "branch": "main",
+      "specialNotes": "This is the Convex backend repo which includes documentation in /npm-packages/docs. Use the docs to answer questions about the Convex reactive database."
+    },
+    {
+      "name": "tiptap",
+      "url": "https://github.com/ueberdosis/tiptap-docs",
+      "branch": "main",
+      "specialNotes": "This is the Tiptap documentation repo. Use the docs to answer questions about the Tiptap rich text editor."
+    },
+    {
+      "name": "better-auth",
+      "url": "https://github.com/better-auth/better-auth",
+      "branch": "main",
+      "specialNotes": "This is the Better Auth repo. Use the docs to answer questions about authentication in TypeScript/JavaScript applications."
+    }
+  ],
+  "model": "glm-4.6",
+  "provider": "zai-coding-plan"
+}

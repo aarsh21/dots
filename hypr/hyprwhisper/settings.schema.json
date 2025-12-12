@@ -1,0 +1,72 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://github.com/hyprwhisper/settings.schema.json",
+  "title": "HyprWhisper Settings",
+  "description": "Configuration for HyprWhisper speech-to-text application",
+  "type": "object",
+  "properties": {
+    "$schema": {
+      "type": "string",
+      "description": "JSON Schema reference for IntelliSense support"
+    },
+    "model": {
+      "type": "string",
+      "enum": [
+        "tiny",
+        "tiny.en",
+        "base",
+        "base.en",
+        "small",
+        "small.en",
+        "medium",
+        "medium.en",
+        "large-v3",
+        "large-v3-turbo"
+      ],
+      "default": "base",
+      "description": "Whisper model size to use. Larger models are more accurate but slower.\n\n- tiny (75 MB): Fastest, least accurate\n- base (142 MB): Good balance of speed and accuracy\n- small (466 MB): Good accuracy, moderate speed\n- medium (1.5 GB): High accuracy, slower\n- large-v3 (3.1 GB): Best accuracy, requires GPU\n- large-v3-turbo (1.6 GB): Optimized large model\n\nModels ending in '.en' are English-only but faster."
+    },
+    "runtime": {
+      "type": "string",
+      "enum": ["auto", "cpu", "cuda", "rocm", "vulkan"],
+      "default": "auto",
+      "description": "Compute runtime for inference.\n\n- auto: Automatically detect best available runtime\n- cpu: Run on CPU (always available, slowest)\n- cuda: NVIDIA GPU acceleration (requires NVIDIA GPU + CUDA)\n- rocm: AMD GPU acceleration (requires AMD GPU + ROCm)\n- vulkan: Cross-platform GPU acceleration (experimental)"
+    },
+    "language": {
+      "type": "string",
+      "enum": [
+        "auto",
+        "en",
+        "es",
+        "fr",
+        "de",
+        "it",
+        "pt",
+        "ru",
+        "zh",
+        "ja",
+        "ko",
+        "ar",
+        "hi",
+        "nl",
+        "pl",
+        "tr",
+        "vi",
+        "th",
+        "id",
+        "uk",
+        "cs"
+      ],
+      "default": "auto",
+      "description": "Transcription language.\n\n- auto: Auto-detect language (slightly slower)\n- en: English\n- es: Spanish (Español)\n- fr: French (Français)\n- de: German (Deutsch)\n- it: Italian (Italiano)\n- pt: Portuguese (Português)\n- ru: Russian (Русский)\n- zh: Chinese (中文)\n- ja: Japanese (日本語)\n- ko: Korean (한국어)\n- ar: Arabic (العربية)\n- hi: Hindi (हिन्दी)\n- nl: Dutch (Nederlands)\n- pl: Polish (Polski)\n- tr: Turkish (Türkçe)\n- vi: Vietnamese (Tiếng Việt)\n- th: Thai (ไทย)\n- id: Indonesian (Bahasa Indonesia)\n- uk: Ukrainian (Українська)\n- cs: Czech (Čeština)"
+    },
+    "version": {
+      "type": "integer",
+      "minimum": 1,
+      "default": 1,
+      "description": "Settings schema version for migrations. Do not modify manually."
+    }
+  },
+  "required": ["model", "runtime", "language"],
+  "additionalProperties": false
+}

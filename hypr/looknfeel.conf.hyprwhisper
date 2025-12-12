@@ -1,0 +1,9 @@
+# HyprWhisper voice dictation overlay
+windowrulev2 = float, class:(hyprwhisper)
+windowrulev2 = pin, class:(hyprwhisper)
+windowrulev2 = noborder, class:(hyprwhisper)
+windowrulev2 = noshadow, class:(hyprwhisper)
+windowrulev2 = size 400 120, class:(hyprwhisper)
+windowrulev2 = center, class:(hyprwhisper)
+windowrulev2 = stayfocused, class:(hyprwhisper)
+windowrulev2 = dimaround, class:(hyprwhisper)

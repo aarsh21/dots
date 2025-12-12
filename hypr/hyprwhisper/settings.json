@@ -1,0 +1,6 @@
+{
+  "$schema": "./settings.schema.json",
+  "model": "large-v3",
+  "runtime": "auto",
+  "language": "en"
+}
